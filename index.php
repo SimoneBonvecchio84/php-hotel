@@ -55,28 +55,29 @@ $hotels = [
 </head>
 
 <body>
-    <ul>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Lista Hotel</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Parcheggio</th>
+                <th scope="col">Voto</th>
+                <th scope="col">Distanza Dal centro</th>
+            </tr>
+        </thead>
         <?php foreach ($hotels as $cur_hotel) { ?>
-            <li>
-                <?php echo $cur_hotel["name"] ?>
-                <ul>
-                    <li>
-                        Descrizione:
-                        <?php echo $cur_hotel["description"]?>
-                    </li>
-                    <li>
-                        Parcheggio:
-                        <?php echo $cur_hotel["parking"]?>
-                    </li>
-                    <li>
-                        Voto:
-                        <?php echo $cur_hotel["vote"]?>
-                    </li>
-                    <li>
-                        Distanza dal centro:
-                        <?php echo $cur_hotel["distance_to_center"]?>
-                    </li>
-                </ul>
-            </li>
-        <?php } ?>
-    </ul>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><?php echo $cur_hotel["name"] ?></td>
+                    <td><?php echo $cur_hotel["description"] ?></td>
+                    <td><?php echo $cur_hotel["parking"] ?></td>
+                    <td><?php echo $cur_hotel["vote"] ?></td>
+                    <td><?php echo $cur_hotel["distance_to_center"] ?></td>
+                </tr>
+
+            <?php } ?>
+            </tbody>
+    </table>
