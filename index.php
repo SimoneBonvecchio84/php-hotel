@@ -70,7 +70,7 @@ $hotels = [
         <?php foreach ($hotels as $cur_hotel) { ?>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">o</th>
                     <td><?php echo $cur_hotel["name"] ?></td>
                     <td><?php echo $cur_hotel["description"] ?></td>
                     <td><?php echo $cur_hotel["parking"] ?></td>
